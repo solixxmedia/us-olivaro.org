@@ -1,0 +1,42 @@
+# =====================================================
+# Olivaro - Robots.txt
+# Policy: FULLY OPEN. All search engines and AI assistants 
+# are permitted to crawl and index the entire site.
+# =====================================================
+
+# 1) Default rule: Allow every bot to crawl everything
+User-agent: *
+Allow: /
+
+# 2) Explicitly allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 3) Explicitly allow AI / LLM crawlers (Critical for AEO/GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# 4) Block common backend/private directories (Good practice)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /.git/
+Disallow: /.env
+
+# 5) Sitemap location (MUST use your exact live domain)
+Sitemap: https://us-olivaro.org/sitemap.xml
